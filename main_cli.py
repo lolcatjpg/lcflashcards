@@ -15,10 +15,10 @@ def practice():
             print("Correct!\n")
         else:
             print(f"Incorrect!\nYour answer:\n{feedback_list[0]}\n{feedback_list[1]}\nCorrect answer:\n{feedback_list[2]}\n{feedback_list[3]}")
-        
+
         card = feedback.update_rating(card, correct, 2)
         set_edit.update_set(set_file, flashcards)
-        
+
 
 def import_csv():
     in_file = input('csv file: ')

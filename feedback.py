@@ -28,5 +28,10 @@ def update_rating(flashcard: dict, correct: bool, max_competence: int) -> dict:
             flashcard["competence"] = max_competence
         else:
             flashcard["competence"] = 0
+    else:
+        if correct and flashcard["competence"] < max_competence:
+            flashcard["competence"] += 1
+        elif not correct and flashcard["competence"] > 0:
+            flashcard["competence"] = 0
 
     return flashcard

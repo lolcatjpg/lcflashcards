@@ -1,0 +1,39 @@
+{
+    "cards": [
+        {
+            "q": "avus",
+            "a": "grandfather",
+            "competence": -1
+        },
+        {
+            "q": "rosa",
+            "a": "rose",
+            "competence": -1
+        },
+        {
+            "q": "donum",
+            "a": "present",
+            "competence": -1
+        },
+        {
+            "q": "dux",
+            "a": "leader",
+            "competence": -1
+        },
+        {
+            "q": "mater",
+            "a": "mother",
+            "competence": -1
+        },
+        {
+            "q": "corpus",
+            "a": "body",
+            "competence": -1
+        },
+        {
+            "q": "magnus",
+            "a": "big, important",
+            "competence": -1
+        }
+    ]
+}

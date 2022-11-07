@@ -10,7 +10,7 @@ def practice():
 
     for card in flashcards:
         user_answer = input(f"{card.get('q')}: ")
-        feedback_list, correct = feedback.q_a_checker(user_answer, card)
+        feedback_list, correct = feedback.check_answer(user_answer, card)
         if correct:
             print("Correct!\n")
         else:

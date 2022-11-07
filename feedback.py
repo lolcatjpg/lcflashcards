@@ -1,4 +1,4 @@
-def q_a_checker(user_input: str, flashcard: dict) -> tuple[list, bool]:
+def check_answer(user_input: str, flashcard: dict) -> tuple[list, bool]:
     """returns tuple with feedback (list) and True/False for correct/incorrect answer"""
     from difflib import Differ
 

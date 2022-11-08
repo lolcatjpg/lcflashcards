@@ -23,6 +23,7 @@ def check_answer(user_input: str, flashcard: dict) -> tuple[list, bool]:
 def update_rating(flashcard: dict, correct: bool, max_competence: int) -> dict:
     """update competence rating of flashcard, based on if user was correct.
     returns the updated flashcard"""
+    
     if flashcard.get("competence") == -1:
         if correct:
             flashcard["competence"] = max_competence

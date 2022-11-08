@@ -11,12 +11,14 @@ def csv_import(csv_file: str, output_set: str) -> None:
         for row in reader:
             cards.append(row)
 
-    cards_json = {"cards": []}
+    set_json = {"cards": []}
     for card in cards:
-        cards_json["cards"].append({"q": card[0], "a": card[1], "competence": -1})
+        set_json["cards"].append({"q": card[0], "a": card[1], "competence": -1})
+    
+    set_json["settings"] = {"max_competence": 2}
 
     with open(output_set, "w") as f:
-        f.write(json.dumps(cards_json, indent=4))
+        f.write(json.dumps(set_json, indent=4))
 
 
 def update_set(set_file: str, flashcards: list) -> None:

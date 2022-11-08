@@ -35,5 +35,8 @@
             "a": "big, important",
             "competence": -1
         }
-    ]
+    ],
+    "settings": {
+        "max_competence": 2
+    }
 }

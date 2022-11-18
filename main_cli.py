@@ -11,11 +11,18 @@ def practice():
         cards_raw = f_content["cards"]
         settings = f_content["settings"]
 
+    practice_round = 0
     while True:
         cards = card_feeder.shuffle_simple(cards_raw, settings)
-        if len(cards = 0):
+        if practice_round != 0 and len(cards) != 0:
+            if input("Continue practice? (Y/n) ").lower() in ("n", "no"):
+                print("Practice stopped")
+                break
+
+        if len(cards) == 0:
             print("Practice finished!")
             break
+
         for flashcard_index in cards:
             user_answer = input(f"{cards_raw[flashcard_index].get('q')}: ")
             feedback_list, correct = feedback.check_answer(user_answer, cards_raw[flashcard_index])
@@ -26,6 +33,8 @@ def practice():
 
             cards_raw[flashcard_index] = feedback.update_rating(cards_raw[flashcard_index], correct, settings["max_competence"])
             set_edit.update_set(set_file, cards_raw)
+
+        practice_round += 1
 
 
 def import_csv():
